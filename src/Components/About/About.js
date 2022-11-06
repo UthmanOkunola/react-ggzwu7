@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export default function AboutUs(props) {
-  // if(props !== 'AboutUs'){
-  //   throw new Error('Not available')
-  // }
+export default function AboutUs() {
+  const location = useLocation()
+  const repos  = location.state
+
   return (
     <>
-      <h1>This is the About Us page</h1>
+      <div>language: 
+
+      {repos.language}
+
+      </div>
     </>
   );
 }
